@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Macey & Yin Wedding</title>
+    <!-- 引入 Tailwind CSS 讓排版更輕鬆 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts 增加浪漫感 -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wedding-gold': '#D4AF37',
+                        'wedding-blush': '#F8C8DC',
+                        'wedding-bg': '#FAF9F6', // 象牙白背景
+                    },
+                    fontFamily: {
+                        'script': ['"Great Vibes"', 'cursive'], // 浪漫英文手寫字體
+                        'sans': ['"Noto Sans TC"', 'sans-serif'], // 清晰的中文無襯線字體
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 一些額外的自訂樣式讓畫面更精緻 */
+        body {
+            background-color: #FAF9F6;
+            color: #333;
+        }
+        .floral-bg {
+            /* 這裡先用簡單的漸層模擬花卉背景，之後你可以換成真正的照片 */
+            background-image: linear-gradient(rgba(250, 249, 246, 0.8), rgba(250, 249, 246, 0.9)), url('https://placehold.co/1920x1080/F8C8DC/FFFFFF?text=Floral+Background');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* 讓背景固定，滾動時有層次感 */
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased floral-bg min-h-screen flex flex-col items-center py-10 px-4">
+
+    <!-- 主容器 -->
+    <main class="w-full max-w-3xl bg-white rounded-3xl p-8 md:p-16 card-shadow text-center relative overflow-hidden">
+        
+        <!-- 頂部裝飾元素 (可選) -->
+        <div class="absolute top-0 left-0 w-full h-2 bg-wedding-gold opacity-50"></div>
+
+        <header class="mb-12">
+            <h1 class="font-script text-6xl md:text-8xl text-wedding-gold mb-2 leading-tight">Macey & Yin</h1>
+            <p class="text-xl md:text-2xl tracking-widest text-gray-500 uppercase">Wedding Ceremony</p>
+        </header>
+
+        <section class="mb-16">
+            <div class="inline-flex space-x-4 text-wedding-gold p-4 rounded-xl bg-wedding-bg border border-wedding-blush/30">
+                <div class="text-center">
+                    <span id="days" class="block text-3xl font-bold">--</span>
+                    <span class="text-sm">Days</span>
+                </div>
+                <div class="text-3xl font-bold">:</div>
+                <div class="text-center">
+                    <span id="hours" class="block text-3xl font-bold">--</span>
+                    <span class="text-sm">Hours</span>
+                </div>
+                <div class="text-3xl font-bold">:</div>
+                <div class="text-center">
+                    <span id="minutes" class="block text-3xl font-bold">--</span>
+                    <span class="text-sm">Mins</span>
+                </div>
+                <div class="text-3xl font-bold">:</div>
+                <div class="text-center">
+                    <span id="seconds" class="block text-3xl font-bold">--</span>
+                    <span class="text-sm">Secs</span>
+                </div>
+            </div>
+            <p class="mt-4 text-gray-500 text-sm">我們期待與您分享這份喜悅</p>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-10 text-gray-700">
+            
+            <!-- 中文資訊 -->
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold text-wedding-gold border-b pb-2 inline-block">誠邀出席</h2>
+                
+                <div class="space-y-2">
+                    <h3 class="font-bold text-lg">日期</h3>
+                    <p>2026年8月16日 (星期日)</p>
+                    <p>下午 2:30 至 下午 5:00</p>
+                    <p class="text-wedding-gold font-bold">(下午 3:00 典禮開始)</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h3 class="font-bold text-lg">地點</h3>
+                    <p>中國基督教播道會雅斤堂</p>
+                    <p>九龍長沙灣昌華街23號<br>富華廣場 1 樓</p>
+                </div>
+            </section>
+
+            <!-- 英文資訊 -->
+            <section class="space-y-6 md:border-l border-gray-100 md:pl-10">
+                <h2 class="text-2xl font-bold text-wedding-gold border-b pb-2 inline-block">Invitation</h2>
+                
+                <div class="space-y-2">
+                    <h3 class="font-bold text-lg">Date</h3>
+                    <p>Sunday 16 August 2026</p>
+                    <p>2:30 PM to 5:00 PM</p>
+                    <p class="text-wedding-gold font-bold">(3:00 PM Ceremony Begins)</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h3 class="font-bold text-lg">Address</h3>
+                    <p>E.F.C.C. Jachin Church</p>
+                    <p>1/F, Florence Plaza,<br>Cheung Wah Street,<br>Cheung Sha Wan, Kowloon</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- 地圖區塊 -->
+        <section class="mt-16 pt-8 border-t border-gray-100">
+            <h2 class="text-2xl font-bold text-wedding-gold mb-6">Location & Directions</h2>
+            
+            <!-- 交通建議 -->
+            <div class="mb-8 text-gray-700 bg-wedding-blush/10 p-5 rounded-2xl text-left inline-block w-full border border-wedding-blush/30 shadow-sm">
+                <h3 class="font-bold text-lg text-wedding-gold mb-3 flex items-center">
+                    <span class="text-2xl mr-2">🚇</span> 交通指南 Transportation
+                </h3>
+                <div class="space-y-1">
+                    <p>港鐵 <strong class="text-red-700">荃灣線 長沙灣站 C2 出口</strong>，步行約 7-8 分鐘。</p>
+                    <p class="text-sm text-gray-500">MTR Tsuen Wan Line, Cheung Sha Wan Station Exit C2, approx. 7-8 mins walk.</p>
+                </div>
+            </div>
+
+            <!-- 使用 aspect-video 讓地圖在不同螢幕上都能保持良好的比例 (16:9) -->
+            <div class="w-full aspect-video rounded-2xl overflow-hidden card-shadow">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.627685651378!2d114.15570077609204!3d22.33878647965902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404074c5d6c8e3d%3A0xc6eb94fa7a08b6f3!2z5Lit5ZyL5Z-6552j5pWZ5pKt6YGT5pyD6ZuF5pak5aCC!5e0!3m2!1szh-TW!2shk!4v1716962345678!5m2!1szh-TW!2shk" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
+                <!-- 這個連結使用了 Google Maps 的規劃路線 API，會自動將目標設為教會 -->
+                <a href="https://www.google.com/maps/dir/?api=1&destination=中國基督教播道會雅斤堂+Florence+Plaza" target="_blank" 
+                   class="px-8 py-3 bg-wedding-gold text-white rounded-full hover:bg-yellow-600 transition-colors shadow-lg flex items-center justify-center gap-2 font-bold text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+                    </svg>
+                    規劃路線 Get Directions
+                </a>
+            </div>
+        </section>
+
+        <footer class="mt-16 pt-8 border-t border-gray-100 text-gray-400 text-sm">
+            <p>期待...</p>
+            <p class="mt-2 text-xs">MaceYin © 2026</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // 設定婚禮日期 (注意：JavaScript 的月份是從 0 開始，所以 8月是 7)
+        // 為了精確，我們設定到典禮開始時間：2026年8月16日 15:00:00
+        const weddingDate = new Date(2026, 7, 16, 15, 0, 0).getTime();
+
+        // 每秒更新一次倒數計時
+        const countdownTimer = setInterval(function() {
+
+            // 取得現在時間
+            const now = new Date().getTime();
+
+            // 計算距離婚禮還有多少毫秒
+            const distance = weddingDate - now;
+
+            // 計算天、小時、分鐘、秒
+            // 1 天 = 1000 毫秒 * 60 秒 * 60 分鐘 * 24 小時
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // 將結果顯示在 HTML 元素中
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours; // 補零
+            document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+
+            // 如果倒數結束了
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("days").innerHTML = "0";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                // 你可以在這裡加個小提醒說 "婚禮開始囉！"
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
